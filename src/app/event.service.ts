@@ -1,0 +1,728 @@
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class EventService {
+
+  getEvents() {
+    return EVENTS;
+  }
+
+}
+
+const EVENTS = [
+  {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  },
+    {
+    title: "Battle at Midway Village",
+    description: `<p>Bacon ipsum dolor amet tongue brisket beef ribs jowl pig 
+                  pork loin. Picanha meatloaf capicola alcatra chicken prosciutto 
+                  short ribs drumstick. Short ribs picanha andouille ham salami 
+                  boudin brisket beef ribs bacon flank tri-tip strip steak cupim. 
+                  Beef ribs pancetta spare ribs, doner strip steak flank tenderloin 
+                  short ribs prosciutto beef fatback.</p>
+
+                  <p>Rump landjaeger tail filet mignon pork belly kielbasa biltong 
+                  picanha jerky jowl prosciutto short loin alcatra flank. Bacon 
+                  meatball short ribs, brisket shankle chuck cow salami pork loin 
+                  flank beef ribs picanha shank. Spare ribs porchetta salami chuck, 
+                  jerky biltong short ribs. Swine alcatra pastrami kevin spare ribs.</p>`,
+    timePeriod: 'Civil War',
+    type: 'reenactment',
+    startDate: '12/3/2016',
+    endDate: '12/4/2016',
+    location: ''
+  },
+  {
+    title: "Invasion of Naperville",
+    description: `<p>Sausage sirloin tri-tip tongue turkey corned beef swine hamburger 
+                  brisket. Kielbasa pastrami jerky, drumstick prosciutto shankle ribeye 
+                  pancetta beef ribs beef boudin tenderloin shank burgdoggen porchetta. 
+                  Short loin kielbasa sausage strip steak rump. Turducken ground round 
+                  tri-tip, turkey ham pancetta tongue short loin leberkas brisket short 
+                  ribs picanha. Jowl andouille burgdoggen frankfurter sausage rump 
+                  porchetta pork chop tongue prosciutto short loin shoulder.</p>
+
+                  <p>Chuck beef meatloaf turkey, jerky kevin pastrami cupim shoulder. 
+                  Hamburger sirloin beef, fatback brisket beef ribs porchetta. Strip steak 
+                  meatloaf leberkas ground round shank. Picanha venison burgdoggen shankle 
+                  tongue jowl, prosciutto t-bone chuck corned beef landjaeger pork pig strip
+                  steak sausage. Chicken porchetta leberkas ribeye strip steak, shoulder 
+                  shank biltong pastrami tongue brisket ham.</p>`,
+    timePeriod: 'WWII',
+    type: 'reenactment',
+    startDate: '3/1/2017',
+    endDate: '3/3/2017',
+    location: ''
+  },
+  {
+    title: "17th Annual Mountain Social",
+    description: `<p>Biltong corned beef tri-tip, tail ham hock rump turkey kevin pork 
+                  andouille prosciutto strip steak shankle. Ham hock short loin corned 
+                  beef burgdoggen. Pork chop tenderloin pork loin cupim picanha. Meatball 
+                  doner cow chicken kielbasa porchetta tail. Corned beef chuck tenderloin 
+                  biltong rump bresaola cupim brisket turducken landjaeger kielbasa jerky.</p>`,
+    timePeriod: 'War of 1812',
+    type: 'living history',
+    startDate: '1/7/2017',
+    endDate: '1/7/2017',
+    location: ''
+  }
+]
