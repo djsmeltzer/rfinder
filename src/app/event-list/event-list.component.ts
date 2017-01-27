@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../event.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-event-list',
@@ -12,14 +13,29 @@ export class EventListComponent implements OnInit {
   pages;
   perPage: number = 5;
   currentPage: number = 1;
+  errorMessage;
 
 
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
-    this.allEvents = this.eventService.getEvents();
-    this.currentEvents = this.allEvents.slice(0, this.perPage);
-    this.pages = Array(Math.ceil(this.allEvents.length / this.perPage)).fill(0).map((x,i) => {return i+1;});
+    this.getEvents();
+  }
+
+  getEvents() {
+    this.eventService.getEvents().subscribe(
+      events => this.setEvents(events),
+      error => this.errorMessage = <any>error
+    );
+  }
+
+  private setEvents(events) {
+    console.log(events);
+    this.allEvents = events;
+    if (events.length > 0) {
+      this.currentEvents = this.allEvents.slice(0, this.perPage);
+      this.pages = Array(Math.ceil(this.allEvents.length / this.perPage)).fill(0).map((x,i) => {return i+1;});
+    }
   }
 
   goToPage(pageNumber: number) {

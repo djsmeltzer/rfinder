@@ -1,8 +1,9 @@
 <section class="eventList">
-  <header>
+  <header *ngIf="pages">
     <nav class="pageControls">{{pages.length}} -
       <a class="pageNum" (click)="goToPage(page)" [class.current]="page === currentPage" *ngFor="let page of pages">{{page}}</a>
     </nav>
   </header>
   <app-event *ngFor="let event of currentEvents" [event]='event'></app-event>
 </section>
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
